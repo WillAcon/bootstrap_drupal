@@ -43,23 +43,3 @@ settings[collapse] = 1
 settings[container] = 0
 settings[row] = 0
 
-; Information added by Drupal.org packaging script on 2014-04-16
-version = "7.x-3.4"
-core = "7.x"
-project = "bootstrap_barrio"
-datestamp = "1397690362"
-
-
-; Information added by Drupal.org packaging script on 2014-05-23
-version = "7.x-3.7"
-core = "7.x"
-project = "bootstrap_barrio"
-datestamp = "1400882031"
-
-
-; Information added by Drupal.org packaging script on 2014-07-27
-version = "7.x-3.8"
-core = "7.x"
-project = "bootstrap_barrio"
-datestamp = "1406480033"
-
