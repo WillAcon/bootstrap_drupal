@@ -151,4 +151,7 @@
     <div id="footer-inner" class="container">
     <?php print render($page['footer']); ?>
     </div>
+    <div id="development" class="container">
+    <?php print render($page['footer_development']); ?>
+    </div>
   </footer>
