@@ -1,5 +1,5 @@
 name = Bootstrap Drupal
-description = Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+description = Built to use Bootstrap.
 core = 7.x
 base theme = bootstrap
 
@@ -19,6 +19,7 @@ regions[content_bottom] = 'Content Bottom'
 regions[postcript_top]  = 'Postcript Top'
 regions[postcript_bottom] = 'Postcript Bottom'
 regions[footer]         = 'Footer'
+regions[footer_development]         = 'Footer Development'
 
 stylesheets[all][] = css/custom.css
 stylesheets[all][] = css/style.css

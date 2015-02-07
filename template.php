@@ -46,9 +46,15 @@ function bootstrap_drupal_preprocess_page(&$variables) {
   else {
     $variables['collapse'] = 'not-collapse';
   }
-  if (!theme_get_setting('print_content') && drupal_is_front_page()) {
+ if (!theme_get_setting('print_content') && drupal_is_front_page()) {
     $variables['print_content'] = FALSE;
-  }
+     if (module_exists('metatag')) {
+      $variables['pagemetatag'] = metatag_metatags_view('global:frontpage');
+    }
+    else {
+      $variables['pagemetatag'] = array();
+    }
+ }
   else {
     $variables['print_content'] = TRUE;
   }
