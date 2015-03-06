@@ -22,6 +22,7 @@ regions[footer]         = 'Footer'
 regions[footer_development]         = 'Footer Development'
 
 stylesheets[all][] = css/custom.css
+stylesheets[all][] = css/media.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/yamm.css
 scripts[] = js/script.js

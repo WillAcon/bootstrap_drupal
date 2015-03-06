@@ -1,0 +1,55 @@
+
+/* media */
+
+.media {
+    margin-top: 15px;
+}
+.media:first-child {
+    margin-top: 0;
+}
+.media, .media-body {
+    overflow: hidden;
+}
+.media-body {
+  /*  width: 10000px;*/
+}
+.clase1{
+  font-size: 12px;
+  text-align:justify;
+}
+.media-object {
+    display: block;
+}
+.media-object p{
+    overflow: hidden;
+}
+.media-object img{
+    transition: all 0.8s ease-in-out 0s;
+}
+.media-right, .media > .pull-right {
+    padding-left: 10px;
+}
+.media-left, .media > .pull-left {
+    padding-right: 10px;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+@media(max-width: 800px) {
+.media-body, .media-left, .media-right {
+    vertical-align: inherit;
+    display: inherit;
+}
+}
+.media-middle {
+    vertical-align: middle;
+}
+.media-bottom {
+    vertical-align: bottom;
+}
+.media-heading {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
