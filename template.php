@@ -92,3 +92,25 @@ function _bootstrap_drupal_block_list($region) {
   return $drupal_list;
 }
 
+/**
+ * Implements hook_element_info_alter().
+ */
+function bootstrap_drupal_element_info_alter(&$elements) {
+    if (!empty($element['#input'])) {
+      $element['#process'][] = '_bootstrap_drupal_process_input';
+    }
+}
+/**
+ * Process input elements.
+ */
+function _bootstrap_drupal_process_input(&$element, &$form_state) {
+  // Only add the "form-control" class for specific element input types.
+  $types = array(
+    // Elements module.
+    'webform_email',
+  );
+  if (!empty($element['#type']) && (in_array($element['#type'], $types) || ($element['#type'] === 'file' && empty($element['#managed_file'])))) {
+    $element['#attributes']['class'][] = 'form-control';
+  }
+  return $element;
+}
