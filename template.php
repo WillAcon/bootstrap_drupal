@@ -96,12 +96,15 @@ function _bootstrap_drupal_block_list($region) {
  * Implements hook_element_info_alter().
  */
 function bootstrap_drupal_element_info_alter(&$elements) {
-    if (!empty($element['#input'])) {
-      $element['#process'][] = '_bootstrap_drupal_process_input';
+    // Element mail of module webform
+    if (module_exists('webform')) {
+        if (!empty($elements["webform_email"])) {
+              $elements["webform_email"]['#process'][] = '_bootstrap_drupal_process_input';
+        }
     }
 }
 /**
- * Process input elements.
+ * Add class form-control in fields
  */
 function _bootstrap_drupal_process_input(&$element, &$form_state) {
   // Only add the "form-control" class for specific element input types.
