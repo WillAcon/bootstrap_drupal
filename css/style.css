@@ -67,32 +67,10 @@ footer.footer { background: black; margin: 0; }
 #block-menu-menu-menu-footer .menu li a { color: white; display: inline-block; }
 #block-menu-menu-menu-footer .menu li a:hover { background: transparent; text-decoration: underline; }
 
-#block-block-1 { text-align: center; color: white; }
-#block-block-1 a { color: white; }
-
 #block-devel-execute-php { clear: both; }
 
 .block-facetapi input[type=checkbox] { margin-right: 5px; }
 
-/* SLIDER */
-#layerslider h2{
-	background: rgba(0,0,0,.5);
-	border-radius: 0; 
-	font-size: 24px; }
-#layerslider div.ls-l {
-    color: white;
-    font-size: 24px;
-    left: 120px; 
-    top: 200px;
-    white-space: nowrap; }
-#layerslider a.ls-l {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
-    color: white;
-    display: inline-block;
-    left: 120px;
-    padding: 5px;
-    top: 254px;
-    white-space: nowrap; }
 
 #commerce-addressbook-billing-default .views-row { background: rgba(0,0,0,.15); padding: 15px; }
 
@@ -103,3 +81,28 @@ margin-bottom: 10px;
 overflow: hidden; }
 
 .page-user-addressbook #commerce-addressbook-billing-list td .views-field address { border: 1px solid #ccc; padding: 10px; }
+
+/*Menu fixed*/
+#navbar.navbar.navbar-default {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 255); padding: 10px 0; position: relative; /*top: 35px;*/
+    border: 0 none; border-radius: 0; box-shadow: none; transition: all 0.6s ease 0s; margin: 0 auto;
+    width: 100%; max-width: 100%;}
+#header.header{float: right;}
+#main-nav ul li a{
+    transition: all 0.6s ease 0s;
+    -moz-transition: all 0.6s ease 0s;
+    -webkit-transition: all 0.6s ease 0s;
+    -o-transition: all 0.6s ease 0s;
+    color: #0e5285;
+    font-family: "Lato",sans-serif;
+    padding: 20px 10px;
+    text-transform: uppercase;}
+#main-nav ul li a:hover,
+#main-nav ul li a.active, #main-nav ul li a.active-trail{
+    background: no-repeat scroll 0 0 #0E5285 !important;
+    color: #FFF;}
+#navbar.navbar.navbar-default.navbar-top{
+    background: none repeat scroll 0 0 #fff;
+    margin: 0 auto; max-width: 100%; padding: 0; position: fixed; top: 0;
+    left: 0; width: 100%; z-index: 10;}
+.navbar-collapse{padding: 0 !important;}
