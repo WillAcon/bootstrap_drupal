@@ -14,75 +14,77 @@
 </header>
 <?php endif; ?>
 <header id="navbar" class="<?php print $navbar_classes; ?>" role="banner">
-  <div class="navbar-inner">
-     <div id="main-navs">
-       <div class="container">
-       <div class="navbar-header">
-        <?php if (!empty($logo)): ?>
-          <a class="logo pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </a>
-        <?php endif; ?>
+  <div class="container">
+      <div class="navbar-inner">
+         <div id="main-navs">
+           <div class="container">
+           <div class="navbar-header">
+            <?php if (!empty($logo)): ?>
+              <a class="logo pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+              </a>
+            <?php endif; ?>
 
-        <?php if (!empty($site_name)): ?>
-          <h1 id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="brand"><?php print $site_name; ?></a>
-          </h1>
-        <?php endif; ?>
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-       </div>
-      
-       <div id="header" class="header">
-         <div>
-          <?php print render($page['header']); ?>
-          <?php if (!empty($page['yamm'])): ?>
-            <div class="navbar yamm">
-              <div id="navyamm" class="nav-collapse">
-                <ul class="nav navbar-nav">
-                  <?php print render($page['yamm']); ?>
-                </ul>
-              </div>
+            <?php if (!empty($site_name)): ?>
+              <h1 id="site-name">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="brand"><?php print $site_name; ?></a>
+              </h1>
+            <?php endif; ?>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+           </div>
+
+           <div id="header" class="header">
+             <div>
+              <?php print render($page['header']); ?>
+              <?php if (!empty($page['yamm'])): ?>
+                <div class="navbar yamm">
+                  <div id="navyamm" class="nav-collapse">
+                    <ul class="nav navbar-nav">
+                      <?php print render($page['yamm']); ?>
+                    </ul>
+                  </div>
+                </div>
+              <?php endif; ?>
+              <?php if (!empty($primary_nav) || !empty($page['navigation'])): ?>
+                <div id="main-nav" class="<?php print $collapse; ?>">
+                  <nav role="navigation">
+                    <?php if (!empty($primary_nav)): ?>
+                      <?php print render($primary_nav); ?>
+                    <?php endif; ?>
+                    <?php if (!empty($page['navigation'])): ?>
+                      <?php print render($page['navigation']); ?>
+                    <?php endif; ?>
+                  </nav>
+                </div>
+              <?php endif; ?>
             </div>
-          <?php endif; ?>
-          <?php if (!empty($primary_nav) || !empty($page['navigation'])): ?>
-            <div id="main-nav" class="<?php print $collapse; ?>">
-              <nav role="navigation">
-                <?php if (!empty($primary_nav)): ?>
-                  <?php print render($primary_nav); ?>
-                <?php endif; ?>
-                <?php if (!empty($page['navigation'])): ?>
-                  <?php print render($page['navigation']); ?>
-                <?php endif; ?>
-              </nav>
-            </div>
-          <?php endif; ?>
-        </div>
+          </div>
+        </div></div>
       </div>
-    </div></div>
-  </div>
+    </div>
 </header>
 
 <?php if (!empty($page['slider'])): ?>
-  <div id="slideshow_container">
+  <section id="slideshow_container">
     <?php print render($page['slider']); ?>
-  </div>
+  </section>
 <?php endif; ?>
 
-<div class="main-container container">
-
+<section class="main-container">
+ <div class="container">
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
     <?php endif; ?>
   </header> <!-- /#header -->
 
-  <div class="row">
+  <div class="row"> 
 
     <?php if (!empty($page['preface'])): ?>
       <div id="preface">
@@ -167,14 +169,14 @@
         </div>
       </div>  <!-- /#preface -->
     <?php endif; ?>  
-
-</div>
+ </div>
+</section>
 
 <footer class="footer">
     <div id="footer-inner" class="container">
     <?php print render($page['footer']); ?>
     </div>
 </footer>
-<div id="development" class="row">
-  <div class="container"> <?php print render($page['footer_development']); ?></div>
-</div>
+<section id="development">
+   <div class="container"> <?php print render($page['footer_development']); ?></div>
+</section>
