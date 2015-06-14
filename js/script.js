@@ -55,5 +55,27 @@ Drupal.behaviors.bootstrap_drupal = {
   }
 
 }
+$(document).ready(function() {
+ pegajoso();
+});
+
+$(document).scroll(function() {
+ pegajoso();
+});
+function pegajoso() {
+ var header =  jQuery('#navbar');
+      header.removeClass('container');
+  var distancia_limit = 100;
+  if (!jQuery('.ltie9').length) {
+    var distancia_scroll = jQuery(document).scrollTop();
+  } else {
+    var distancia_scroll = jQuery('html, body').scrollTop();
+  }
+  if ( distancia_scroll > distancia_limit ) {
+    header.addClass('navbar-top');
+  } else {
+    header.removeClass('navbar-top'); 
+  }
+};
 
 }(jQuery));
