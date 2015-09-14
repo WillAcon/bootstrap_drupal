@@ -96,5 +96,23 @@ function bootstrap_drupal_form_system_theme_settings_alter(&$form, $form_state, 
     '#default_value' => theme_get_setting('is_one'),
     '#description'   => t('Decide if you wish front page to behaive as One Page.'),
   );
+  $form['loading'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('Loading page'),
+    '#description'   => t('Settings if decide Loading page'),
+    '#group' => 'bootstrap_barrio',
+  );
+  $form['loading']['loading_page'] = array(
+    '#type'          => 'managed_file',
+    '#title'         => t('Loading gif'),
+    '#default_value' => theme_get_setting('loading_page'),
+    '#progress_message' => t('Please wait...'),
+    '#progress_indicator' => 'bar',
+    '#upload_location' => 'public://loading_page',
+    '#description'   => t("Upload your gif."),
+    '#upload_validators' => array(
+        'file_validate_extensions' => array('gif'), 
+        ),
+  );
 
 }
