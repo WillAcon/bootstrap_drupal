@@ -2,9 +2,6 @@ body.navbar-is-fixed-top,
 body.admin-menu.navbar-is-fixed-top { padding-top: 52px !important; }
 
 body { padding: 0; overflow-x: hidden; }
-/*LOAD PAGE*/
-#preloader {position: fixed; display: table; text-align: center; width: 100%; height: 100%;top: 0; left: 0; background-color: #FFFFFF; z-index: 999;}
-.tb-cell {display: table-cell; vertical-align: middle;}
 
 .navbar .btn { 
   background: none repeat scroll 0 0 #e1e1e1; border: 0 none; border-radius: 0; float: right; height: 52px; line-height: 52px; padding: 0 15px; }
