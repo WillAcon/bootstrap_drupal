@@ -104,7 +104,7 @@ function bootstrap_drupal_form_system_theme_settings_alter(&$form, $form_state, 
   );
   $form['loading']['loading_page'] = array(
     '#type'          => 'managed_file',
-    '#title'         => t('Loading gif'),
+    '#title'         => t('Loading page'),
     '#default_value' => theme_get_setting('loading_page'),
     '#progress_message' => t('Please wait...'),
     '#progress_indicator' => 'bar',
