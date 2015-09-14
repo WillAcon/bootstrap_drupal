@@ -77,5 +77,8 @@ function pegajoso() {
     header.removeClass('navbar-top'); 
   }
 };
+  jQuery(window).load(function (event) {
+      jQuery('#preloader').fadeOut(1000);
+  });
 
 }(jQuery));
