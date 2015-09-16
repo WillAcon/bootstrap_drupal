@@ -100,7 +100,7 @@ function bootstrap_drupal_form_system_theme_settings_alter(&$form, $form_state, 
     '#type'          => 'fieldset',
     '#title'         => t('Loading page'),
     '#description'   => t('Settings if decide Loading page'),
-    '#group' => 'bootstrap_barrio',
+    '#group' => 'bootstrap_drupal',
   );
   $form['loading']['loading_page'] = array(
     '#type'          => 'managed_file',
