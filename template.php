@@ -12,6 +12,7 @@
  */
 function bootstrap_drupal_preprocess_html(&$variables) {
   $fid = theme_get_setting('loading_page');
+  $fid = ($fid>0) ? $fid : NULL;
   $image_url = isset($fid) ? file_create_url(file_load($fid)->uri) : '/'.drupal_get_path('theme', 'bootstrap_drupal').'/img/loading.gif';
   $variables['loading_page'] = $image_url;
   if (arg(0) == 'taxonomy') {
