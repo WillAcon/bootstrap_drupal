@@ -43,7 +43,13 @@ function bootstrap_drupal_preprocess_html(&$variables) {
   $prefix = implode(" ", $prefixes);
   $variables['rdf_namespaces'] = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';
 }
-
+/**
+* Implements theme_html_head_alter().
+* Removes the Generator tag from the head for Drupal 7
+*/
+function bootstrap_drupal_html_head_alter(&$head_elements) {
+  unset($head_elements['system_meta_generator']);
+}
 /**
  * Override or insert variables into the page template for page output.
  *
