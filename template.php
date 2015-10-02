@@ -42,7 +42,6 @@ function bootstrap_drupal_preprocess_html(&$variables) {
   }
   $prefix = implode(" ", $prefixes);
   $variables['rdf_namespaces'] = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';
- }
 }
 
 /**
