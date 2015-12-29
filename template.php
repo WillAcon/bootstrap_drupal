@@ -42,6 +42,15 @@ function bootstrap_drupal_preprocess_html(&$variables) {
   }
   $prefix = implode(" ", $prefixes);
   $variables['rdf_namespaces'] = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';
+  
+  $viewport = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'viewport',
+        'content' => 'width=device-width, initial-scale=1, maximum-scale=1',
+      ),
+    );
+  drupal_add_html_head($viewport, 'viewport');
 }
 /**
 * Implements theme_html_head_alter().
