@@ -30,7 +30,7 @@ function bootstrap_drupal_preprocess_html(&$variables) {
     $variables['mobile_friendly'] = FALSE;
     drupal_add_css(drupal_get_path('theme', 'bootstrap_drupal') . '/css/no-responsive.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
   }
-  $prefixes = array();
+  /*$prefixes = array();
   $namespaces = explode("\n", trim($variables['rdf_namespaces']));
   foreach ($namespaces as $name) {
     list($key,$url) = explode('=', $name, 2);
@@ -41,7 +41,7 @@ function bootstrap_drupal_preprocess_html(&$variables) {
     }
   }
   $prefix = implode(" ", $prefixes);
-  $variables['rdf_namespaces'] = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';
+  $variables['rdf_namespaces'] = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';*/
   
   $viewport = array(
       '#tag' => 'meta',
