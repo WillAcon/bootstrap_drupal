@@ -11,10 +11,6 @@
  * Define the variable to activate responsive behaivor.
  */
 function bootstrap_drupal_preprocess_html(&$variables) {
-  $fid = theme_get_setting('loading_page');
-  $fid = ($fid>0) ? $fid : NULL;
-  $image_url = isset($fid) ? file_create_url(file_load($fid)->uri) : '/'.drupal_get_path('theme', 'bootstrap_drupal').'/img/loading.gif';
-  $variables['loading_page'] = $image_url;
   if (arg(0) == 'taxonomy') {
     $tid = arg(2);
     $taxonomy = taxonomy_term_load($tid);
@@ -30,18 +26,6 @@ function bootstrap_drupal_preprocess_html(&$variables) {
     $variables['mobile_friendly'] = FALSE;
     drupal_add_css(drupal_get_path('theme', 'bootstrap_drupal') . '/css/no-responsive.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
   }
-  /*$prefixes = array();
-  $namespaces = explode("\n", trim($variables['rdf_namespaces']));
-  foreach ($namespaces as $name) {
-    list($key,$url) = explode('=', $name, 2);
-    list($xml,$space) = explode(':',$key, 2);
-    $url = trim($url, '"');
-    if (!empty($space) && !empty($url)) {
-      $prefixes[] = $space . ': ' . $url;
-    }
-  }
-  $prefix = implode(" ", $prefixes);
-  $variables['rdf_namespaces'] = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';*/
   
   $viewport = array(
       '#tag' => 'meta',
@@ -51,13 +35,24 @@ function bootstrap_drupal_preprocess_html(&$variables) {
       ),
     );
   drupal_add_html_head($viewport, 'viewport');
+    /* set title home*/
+   if (drupal_is_front_page()) {
+    $variables['head_title'] = theme_get_setting('home_title');
+   }
 }
 /**
 * Implements theme_html_head_alter().
 * Removes the Generator tag from the head for Drupal 7
 */
 function bootstrap_drupal_html_head_alter(&$head_elements) {
-  unset($head_elements['system_meta_generator']);
+  /*D7 - Remove Meta Tag Generator*/
+  if (module_exists('metatag')) {
+    unset($head_elements['metatag_generator_0']);
+  }
+  else {
+    unset($head_elements['system_meta_generator']);
+  }
+  /* end D7 - Remove Meta Tag Generator*/
 }
 /**
  * Override or insert variables into the page template for page output.

@@ -6,7 +6,6 @@ base theme = bootstrap
 regions[top]            = 'Top Header'
 regions[header]         = 'Header'
 regions[navigation]     = 'Navigation'
-regions[yamm]           = 'Yamm'
 regions[slider]         = 'Slider'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
@@ -19,13 +18,12 @@ regions[content_bottom] = 'Content Bottom'
 regions[postcript_top]  = 'Postcript Top'
 regions[postcript_bottom] = 'Postcript Bottom'
 regions[footer]         = 'Footer'
-regions[footer_development]         = 'Footer Development'
+regions[footer_development]  = 'Footer Development'
 
 stylesheets[all][] = css/custom.css
 stylesheets[all][] = css/media.css
 stylesheets[all][] = css/media-querie.css
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/yamm.css
 scripts[] = js/script.js
 
 ; --------------------------------------------------------------------------------

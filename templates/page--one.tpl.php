@@ -90,9 +90,7 @@
         <?php print render($page['preface']); ?>
     </div>
     <?php endif; ?>  
-    
 
-    
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
@@ -104,15 +102,13 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-    
 
-    
       <?php if (!empty($page['content_top'])): ?>
       <div id="page-top" class="page">
         <?php print render($page['content_top']); ?>
       </div>
       <?php endif; ?>
-      
+
       <?php if ($print_content): ?>
         <div id="content-inner" class="page">
           <?php print render($page['content']); ?>

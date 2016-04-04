@@ -47,21 +47,17 @@ Drupal.behaviors.bootstrap_drupal = {
     $('.not-front.page-user .main-container .btn').addClass('btn-info');
 
     $('.page-user-addressbook #commerce-addressbook-billing-default .views-row, .page-user-addressbook #commerce-addressbook-billing-list td .views-field').wrapInner('<address></address>');
-
-  // Yamm code
-    $(document).on('click', '.yamm .dropdown-menu', function(e) {
-      e.stopPropagation()
-    })
   }
 
 }
 $(document).ready(function() {
- pegajoso();
+  //pegajoso();
 });
 
 $(document).scroll(function() {
- pegajoso();
+   //pegajoso();
 });
+/*
 function pegajoso() {
  var header =  jQuery('#navbar');
       header.removeClass('container');
@@ -76,9 +72,6 @@ function pegajoso() {
   } else {
     header.removeClass('navbar-top'); 
   }
-};
-  jQuery(window).load(function (event) {
-      jQuery('#preloader').fadeOut(1000);
-  });
+};*/
 
 }(jQuery));

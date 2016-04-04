@@ -19,14 +19,6 @@
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <!-- LOAD PAGE  -->
-  <div id="preloader">
-      <div class="tb-cell">
-          <div id="page-loading">
-            <img src="<?php print $loading_page; ?>">
-          </div>
-      </div>
-  </div>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
