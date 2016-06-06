@@ -42,15 +42,6 @@
            <div id="header" class="header">
              <div>
               <?php print render($page['header']); ?>
-              <?php if (!empty($page['yamm'])): ?>
-                <div class="navbar yamm">
-                  <div id="navyamm" class="nav-collapse">
-                    <ul class="nav navbar-nav">
-                      <?php print render($page['yamm']); ?>
-                    </ul>
-                  </div>
-                </div>
-              <?php endif; ?>
               <?php if (!empty($primary_nav) || !empty($page['navigation'])): ?>
                 <div id="main-nav" class="<?php print $collapse; ?>">
                   <nav role="navigation">
