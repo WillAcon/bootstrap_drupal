@@ -38,7 +38,6 @@
               <span class="icon-bar"></span>
             </button>
            </div>
-
            <div id="header" class="header">
              <div>
               <?php print render($page['header']); ?>
@@ -78,7 +77,7 @@
   <div class="row"> 
 
     <?php if (!empty($page['preface'])): ?>
-      <div id="preface">
+      <div id="preface" class="col-xs-12">
         <?php print render($page['preface']); ?>
       </div>  <!-- /#preface -->
     <?php endif; ?>  
@@ -89,7 +88,7 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>  
 
-    <section class="<?php print $content_width; ?>">  
+    <section class="<?php print $content_width; ?> col-xs-12">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -139,7 +138,7 @@
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="<?php print $sidebar_second_width; ?>" role="complementary">
+      <aside class="<?php print $sidebar_second_width; ?> col-xs-12" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
@@ -150,16 +149,16 @@
         <div class="content">
         <?php print render($page['postcript_top']); ?>
         </div>
-      </div>  <!-- /#preface -->
-    <?php endif; ?>  
+      </div>  <!-- /#postcript_top -->
+    <?php endif; ?>
 
     <?php if (!empty($page['postcript_bottom'])): ?>
       <div id="postcript_bottom" class="clearfix row">
         <div class="content">
         <?php print render($page['postcript_bottom']); ?>
         </div>
-      </div>  <!-- /#preface -->
-    <?php endif; ?>  
+      </div>  <!-- /#postcript_bottom -->
+    <?php endif; ?>
  </div>
 </section>
 
